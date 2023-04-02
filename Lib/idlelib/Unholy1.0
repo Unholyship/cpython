@@ -1,0 +1,64 @@
+Adventure Game Code
+
+
+saran S
+Make simple code for a adventure game
+
+Sure, here's a simple adventure game code using Python:
+
+python
+Copy code
+import time
+
+# function to print text slowly
+def print_slow(text):
+    for character in text:
+        print(character, end='', flush=True)
+        time.sleep(0.05)
+    print()
+
+# game introduction
+print_slow("Welcome to Adventure Game!\n")
+print_slow("You find yourself standing at the entrance of a dark cave.\n")
+
+# player input
+while True:
+    choice = input("Would you like to enter the cave? (y/n): ")
+    if choice.lower() == 'y':
+        print_slow("You enter the cave.\n")
+        break
+    elif choice.lower() == 'n':
+        print_slow("You decide not to enter the cave and go home.\n")
+        exit()
+    else:
+        print_slow("Invalid choice. Please enter 'y' or 'n'.")
+
+# first decision point
+print_slow("As you make your way through the cave, you come across two paths.\n")
+while True:
+    choice = input("Do you take the left path or the right path? (l/r): ")
+    if choice.lower() == 'l':
+        print_slow("You take the left path.\n")
+        break
+    elif choice.lower() == 'r':
+        print_slow("You take the right path.\n")
+        break
+    else:
+        print_slow("Invalid choice. Please enter 'l' or 'r'.")
+
+# second decision point
+print_slow("The path leads you to a room with two doors.\n")
+while True:
+    choice = input("Do you enter the door on the left or the right? (l/r): ")
+    if choice.lower() == 'l':
+        print_slow("You enter the door on the left.\n")
+        break
+    elif choice.lower() == 'r':
+        print_slow("You enter the door on the right.\n")
+        break
+    else:
+        print_slow("Invalid choice. Please enter 'l' or 'r'.")
+
+# final outcome
+print_slow("You find a treasure chest in the room and open it.\n")
+print_slow("Congratulations! You
